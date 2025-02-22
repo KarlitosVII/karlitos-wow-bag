@@ -1,0 +1,16 @@
+{
+    "releases": [
+        {
+            "name":"Baganator",
+            "version":"1.0.0",
+            "filename": "100",
+            "nolib": false,
+            "metadata": [
+                {
+                    "flavor": "mainline",
+                    "interface": 110000
+                }
+            ]
+        }
+    ]
+}
