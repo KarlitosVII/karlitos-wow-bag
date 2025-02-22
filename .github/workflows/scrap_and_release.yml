@@ -56,7 +56,7 @@ jobs:
         id: curl-curseforge
         run: |
           curl -H 'Accept: application/json' \
-            'https://www.curseforge.com/api/v1/mods/1160682/files?pageIndex=0&pageSize=10&sort=dateCreated&sortDescending=true&removeAlphas=true' \
+            'https://www.curseforge.com/api/v1/mods/914482/files?pageIndex=0&pageSize=10&sort=dateCreated&sortDescending=true&removeAlphas=true' \
             -o curse-response.json
           fileNameRaw=$(cat curse-response.json | jq -r '.data[0].fileName')
           fileNameFixed=${fileNameRaw%.*}
@@ -106,14 +106,14 @@ jobs:
         id: get_addon_version
         if: ${{ env.MY_FILENAME != env.CURSE_FILENAME }}
         run: |
-          cd PetBattleCooldowns/
+          cd Baganator/
           echo "get_addon_version=$(cat *.toc | sed -n -E -e 's/^## Version: ([a-zA-Z0-9.-]+).*/\1/p')" >> "$GITHUB_OUTPUT"
 
       - name: Get Interface Version Number
         id: get_interface_version_num
         if: ${{ env.MY_FILENAME != env.CURSE_FILENAME }}
         run: |
-          cd PetBattleCooldowns/
+          cd Baganator/
           echo "get_interface_version_num=$(cat *.toc | sed -n -E -e 's/^## Interface: ([0-9]+).*/\1/p')" >> "$GITHUB_OUTPUT"
 
       - name: Update release.json
