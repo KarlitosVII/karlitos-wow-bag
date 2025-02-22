@@ -2,7 +2,7 @@
     "releases": [
         {
             "name":"Baganator",
-            "version":"1.0.0",
+            "version":"100",
             "filename": "Baganator-100",
             "nolib": false,
             "metadata": [
