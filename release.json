@@ -1,0 +1,16 @@
+{
+    "releases": [
+        {
+            "name":"https://www.curseforge.com/wow/addons/baganator",
+            "version":"799",
+            "filename": "Baganator-799.zip",
+            "nolib": false,
+            "metadata": [
+                {
+                    "flavor": "mainline",
+                    "interface": 120000
+                }
+            ]
+        }
+    ]
+}
